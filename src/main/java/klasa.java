@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 public class ReadWriteMapJsonFile {
+    static String PATH ="C:\\Users\\JJ\\Desktop"; // save and read path
     public static void main(String[] args) {
         try {
             //hashmap
@@ -23,17 +24,16 @@ public class ReadWriteMapJsonFile {
             //Print Json before save in a file
             System.out.println("Json before save in a file" + jsonStr);
 
-            //wirte json into file
+            //write json into file
 
-            BufferedWriter write = new BufferedWriter(new FileWriter("D:\\java examples\\mapper\\ObjectMapping\\src\\main\\java\\output.json"));
+            BufferedWriter write = new BufferedWriter(new FileWriter(PATH));
             write.write(jsonStr);
             write.close();
 
             //-----------------------------------------------------
 
             //read map from json file
-
-            Map<String, String> map1 = mapper.readValue(new File("D:\\java examples\\mapper\\ObjectMapping\\src\\main\\java\\output.json"), new TypeReference<Map<String, Object>>() {});
+            Map<String, String> map1 = mapper.readValue(new File(PATH), new TypeReference<Map<String, Object>>() {});
             //show map
             System.out.println("Map from Jason: " + map1.get("1"));
             System.out.println("Map from Jason: " + map1.get("2"));
