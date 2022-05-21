@@ -29,9 +29,9 @@ public class klasa {
             write.write(jsonStr);
             write.close();
 
-            //middle point
+            //-----------------------------------------------------
 
-            //read from file deserialization json into map
+            //read map from json file
 
             Map<String, String> map1 = mapper.readValue(new File("D:\\java examples\\mapper\\ObjectMapping\\src\\main\\java\\output.json"), new TypeReference<Map<String, Object>>() {});
             //show map
