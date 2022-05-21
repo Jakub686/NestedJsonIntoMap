@@ -7,7 +7,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
-public class klasa {
+public class ReadWriteMapJsonFile {
     public static void main(String[] args) {
         try {
             //hashmap
