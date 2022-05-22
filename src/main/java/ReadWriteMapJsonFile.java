@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,14 +7,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 public class ReadWriteMapJsonFile {
-    static String PATH ="C:\\Users\\JJ\\Desktop"; // save and read path
+    static String PATH ="C:\\Users\\JJ\\Desktop\\db.json"; // save and read path
     public static void main(String[] args) {
         try {
             //hashmap
             HashMap<String, String> sampleMap = new HashMap<>();
             sampleMap.put("1", "aaa");
             sampleMap.put("3", "bbb");
-            sampleMap.put("2", "ccc");
+            sampleMap.put("2", "cdc");
 
             //serialization map into json
             ObjectMapper mapper = new ObjectMapper();
